@@ -1,0 +1,59 @@
+<html>
+<body>
+<h1>Ernest Powershell Stuff </h1>
+  Update Windows 10 from PowerShell
+<pre>To check and install updates with PowerShell, use these steps:
+
+Open Start on Windows 10.
+
+Search for PowerShell, right-click the top result, and select the Run as administrator option.
+
+Type the following command to install the module to run Windows Update and press Enter:
+
+Install-Module PSWindowsUpdate
+Install PSWindowsUpdate
+Quick note: After installing the module, you no longer need to repeat step No. 3 to use the module and manage updates.
+Type A and press Enter to confirm.
+
+Type the following command to check for updates with PowerShell and press Enter:
+
+Get-WindowsUpdate
+Type the following command to install the available Windows 10 updates and press Enter:
+
+Install-WindowsUpdate
+PowerShell install Windows 10 updates
+Type A and press Enter to confirm.
+
+Once you complete the steps, the latest cumulative updates will download and install on your computer.
+
+Manage updates with PowerShell
+The PSWindowsUpdate module includes many options that you can use to manage updates. You can always use the Get-Command –Module PSWindowsUpdate command to query a list of the available commands.
+
+For example, the following steps will download, install, and then reboot the computer to complete the update process:
+
+Open Start.
+
+Search for PowerShell, right-click the top result, and select the Run as administrator option.
+
+Type the following command to download and install all the available updates and reboot the system, and press Enter:
+
+Get-WindowsUpdate -AcceptAll -Install -AutoReboot
+After completing the steps, Windows 10 will download and install all the available updates, rebooting the computer to apply the changes automatically.
+
+Install specific update command
+To download and install a specific update on Windows 10 from PowerShell, use these steps:
+
+Open Start.
+
+Search for PowerShell, right-click the top result, and select the Run as administrator option.
+
+Type the following command to list the available updates along with their KB numbers with PowerShell and press Enter:
+
+Get-WindowsUpdate
+Type the following command to download, install a specific update, reboot the system, and press Enter:
+
+Get-WindowsUpdate -Install -KBArticleID 'KB5021233'
+  In the command, replace “KB5021233” with the KB name of the update you want to install.</pre>
+<p>I'm hosted with GitHub Pages.</p>
+</body>
+</html>
